@@ -59,9 +59,24 @@ terraform destroy -var-file="prod.tfvars"
 - [x] Configure DynamoDB
   - [x] Create aws_dynamodb_table resource
   - [x] Create aws_dynamodb_table_item resource
+- [ ] Configure Lambda Function
+  - [ ] Create AWS Lambda function
+    - [ ] Define function code (Node.js v20.x)
+    - [ ] Configure function environment variables
+    - [ ] Set up IAM role and permissions
+  - [ ] Add Lambda triggers
+    - [ ] Connect Lambda to S3 events
+  - [ ] Test Lambda function
 - [ ] Configure API Gateway
   - [ ] Define API resources and methods
   - [ ] Set up authentication and authorization
   - [ ] Add additional API configurations
 
 > Note: As the project evolves, new tools and components such as AWS Lambda functions may be added to enhance the functionality. Keep an eye on updates and consider extending the configuration accordingly.
+
+### Lambda Function Requirements
+- [ ] Function should accept S3 events
+- [ ] Read content from S3 bucket and validate against defined schema
+- [ ] Publish valid items to an SNS topic
+- [ ] Define environment variables for configuration
+- [ ] Set up IAM role with necessary permissions for S3 and SNS

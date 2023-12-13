@@ -24,7 +24,7 @@ terraform init
 terraform plan -out="tfplan.out" -var-file="prod.tfvars"
 ```
 
-Make sure to review the proposed changes before proceeding to the next step.
+> Make sure to review the proposed changes before proceeding to the next step.
 
 #### Apply the changes defined in the plan:
 ```bash
@@ -36,5 +36,29 @@ To avoid unnecessary costs, it is recommended to destroy the created instances w
 ```bash
 terraform destroy -var-file="prod.tfvars"
 ```
-Confirm the destruction by typing 'yes' when prompted.
+> Confirm the destruction by typing 'yes' when prompted.
 
+## To-Do
+- [x] Create locals block in variables file
+  - [x] Define common_tags
+- [x] Create variables block in variables file
+  - [x] Define aws_region
+  - [x] Define aws_profile
+  - [x] Define domain
+  - [x] Define service_name
+  - [x] Define service_domain
+- [x] Create prod vars file (e.g., `prod.tfvars`)
+  - [x] Set values for aws_region
+  - [x] Set values for aws_profile
+  - [x] Set values for service_name
+  - [x] Set values for service_domain
+- [x] Configure Cognito
+  - [x] Create aws_cognito_user_pool resource
+  - [x] Create aws_cognito_user_pool_client resource
+  - [x] Create aws_cognito_user_pool_domain resource
+- [ ] Configure API Gateway
+  - [ ] Define API resources and methods
+  - [ ] Set up authentication and authorization
+  - [ ] Add additional API configurations
+
+> Note: As the project evolves, new tools and components such as AWS Lambda functions may be added to enhance the functionality. Keep an eye on updates and consider extending the configuration accordingly.

@@ -56,6 +56,9 @@ terraform destroy -var-file="prod.tfvars"
   - [x] Create aws_cognito_user_pool resource
   - [x] Create aws_cognito_user_pool_client resource
   - [x] Create aws_cognito_user_pool_domain resource
+- [x] Configure DynamoDB
+  - [x] Create aws_dynamodb_table resource
+  - [x] Create aws_dynamodb_table_item resource
 - [ ] Configure API Gateway
   - [ ] Define API resources and methods
   - [ ] Set up authentication and authorization
